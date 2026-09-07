@@ -37,7 +37,7 @@
             RbQueja = new RadioButton();
             RbConsulta = new RadioButton();
             BtbEnviar = new Button();
-            textBox2 = new TextBox();
+            TxtResumen = new TextBox();
             label3 = new Label();
             linkLabel1 = new LinkLabel();
             panel1.SuspendLayout();
@@ -55,6 +55,7 @@
             // 
             // TxtNombre
             // 
+            TxtNombre.Cursor = Cursors.IBeam;
             TxtNombre.Location = new Point(171, 31);
             TxtNombre.Name = "TxtNombre";
             TxtNombre.Size = new Size(220, 23);
@@ -76,6 +77,7 @@
             panel1.Controls.Add(RbSugerencia);
             panel1.Controls.Add(RbQueja);
             panel1.Controls.Add(RbConsulta);
+            panel1.Cursor = Cursors.Hand;
             panel1.Location = new Point(12, 109);
             panel1.Name = "panel1";
             panel1.Size = new Size(251, 153);
@@ -126,6 +128,7 @@
             // 
             // BtbEnviar
             // 
+            BtbEnviar.Cursor = Cursors.Hand;
             BtbEnviar.Location = new Point(12, 283);
             BtbEnviar.Name = "BtbEnviar";
             BtbEnviar.Size = new Size(107, 23);
@@ -134,15 +137,16 @@
             BtbEnviar.UseVisualStyleBackColor = true;
             BtbEnviar.Click += BtbEnviar_Click;
             // 
-            // textBox2
+            // TxtResumen
             // 
-            textBox2.Location = new Point(12, 358);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(453, 176);
-            textBox2.TabIndex = 5;
-            textBox2.UseWaitCursor = true;
+            TxtResumen.Cursor = Cursors.No;
+            TxtResumen.Location = new Point(12, 358);
+            TxtResumen.Multiline = true;
+            TxtResumen.Name = "TxtResumen";
+            TxtResumen.ReadOnly = true;
+            TxtResumen.Size = new Size(453, 176);
+            TxtResumen.TabIndex = 5;
+            TxtResumen.UseWaitCursor = true;
             // 
             // label3
             // 
@@ -157,12 +161,14 @@
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
+            linkLabel1.Cursor = Cursors.Help;
             linkLabel1.Location = new Point(171, 588);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(139, 15);
             linkLabel1.TabIndex = 7;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Ver politica de privacidad";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // Form1
             // 
@@ -171,7 +177,7 @@
             ClientSize = new Size(477, 630);
             Controls.Add(linkLabel1);
             Controls.Add(label3);
-            Controls.Add(textBox2);
+            Controls.Add(TxtResumen);
             Controls.Add(BtbEnviar);
             Controls.Add(panel1);
             Controls.Add(label2);
@@ -196,7 +202,7 @@
         private RadioButton RbConsulta;
         private CheckBox chkRespuesta;
         private Button BtbEnviar;
-        private TextBox textBox2;
+        private TextBox TxtResumen;
         private Label label3;
         private LinkLabel linkLabel1;
     }
